@@ -6,7 +6,7 @@
 
 **Emerald** is a JAX-accelerated framework for the closed-loop stabilization of continuous-time nonlinear dynamical systems. 
 
-Standard simulations of high-dimensional energy transfer, fluid dynamics, and continuous-depth neural networks (Neural ODEs) frequently suffer from pathological spectral bias—resulting in rapid ultraviolet (UV) divergence and finite-time `NaN` collapse. Emerald solves this by introducing the **Adaptive $\Omega$-$\Sigma$ Governor**, a dynamic constraint mechanism that monitors the temporal derivative of spectral variance and autonomously scales effective dissipation to quench instability before it destroys the forward pass.
+Standard simulations of high-dimensional energy transfer, fluid dynamics, and continuous-depth neural networks (Neural ODEs) frequently suffer from pathological spectral bias—resulting in rapid ultraviolet (UV) divergence and finite-time `NaN` collapse. Emerald solves this by introducing the **Adaptive $\Omega-\Sigma$ Governor**, a dynamic constraint mechanism that monitors the temporal derivative of spectral variance and autonomously scales effective dissipation to quench instability before it destroys the forward pass.
 
 ## 🚀 Key Features
 * **Closed-Loop Spectral Control:** Replaces static weight decay and artificial low-pass truncation with a state-aware, dynamic regularizer.
@@ -22,7 +22,7 @@ Emerald requires Python 3.10+ and JAX.
 
 ```bash
 # Clone the repository
-git clone [https://github.com/yourusername/emerald-research.git](https://github.com/yourusername/emerald-research.git)
+git clone https://github.com/andrewkkim58-afk/emerald-research.git
 cd emerald-research
 
 # Install dependencies (CPU version by default, see JAX docs for CUDA/TPU)
