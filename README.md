@@ -27,3 +27,11 @@ cd emerald-research
 
 # Install dependencies (CPU version by default, see JAX docs for CUDA/TPU)
 pip install jax jaxlib matplotlib
+
+### Expected Output
+The script will compute the dyadic forward passes and generate `stability_diagnostics.png`. 
+
+1. **Top Graph (Spectral Variance):** You will observe the Unregularized baseline rapidly hit numerical infinity (`NaN`), disappearing from the plot. The Protected engine will successfully repel this trajectory, maintaining a bounded variance of $\mathcal{O}(10^1)$.
+2. **Bottom Graph (System Stability Index):** Demonstrates the adaptive constraint finding a continuous active equilibrium (typically $\approx 0.119$), proving the system is stabilized without being artificially frozen.
+
+![System Stability Diagnostics](stability_diagnostics.png)
